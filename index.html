@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SPIN!</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <style>
+
+            @-webkit-keyframes argh-my-eyes {
+                0%   { background-color: #fff; }
+                49% { background-color: #fff; }
+                50% { background-color: #000; }
+                99% { background-color: #000; }
+                100% { background-color: #ff0000; }
+            }
+            @-moz-keyframes argh-my-eyes {
+                0%   { background-color: #ff0000; }
+                49% { background-color: #ff0000; }
+                50% { background-color: #000; }
+                99% { background-color: #000; }
+                100% { background-color: #ff0000; }
+            }
+            @keyframes argh-my-eyes {
+                0%   { background-color: red; }
+                30% { background-color: purple; }
+                50% { background-color: green; }
+                70% { background-color: orange; }
+                100% { background-color: blue; }
+            }
+
+            body {
+                text-align: center;
+                padding-top: 55px;  
+                color: black;
+                background: white;
+                font-family: Comic Sans MS;
+                -webkit-animation: argh-my-eyes 0.5s infinite;
+                -moz-animation:    argh-my-eyes 0.5s infinite;
+                animation:         argh-my-eyes 0.5s infinite;
+            }
+            
+            jumbotron {
+                
+            }
+
+            img {
+                margin: auto;
+            }
+
+            #loading {
+                -webkit-animation: rotation 3s infinite linear;
+            }
+
+            #loading2 {
+                -webkit-animation: rotation 2s infinite linear;
+            }
+
+            #loading3 {
+                -webkit-animation: rotation 4s infinite linear;
+            }
+
+            @-webkit-keyframes rotation {
+                from {
+                    -webkit-transform: rotate(0deg);
+                }
+                to {
+                    -webkit-transform: rotate(359deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="dogespin"></div>
+        <nav class="navbar fixed-top navbar-expand-sm bg-dark navbar-dark ">
+            <!-- <a class="navbar-brand" href="index.html">Home</a> -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#dogespin">Dogespin</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </nav>
+
+            <h1 style = "margin-top: 5vh; margin-bottom: 10vh; color: white">wow much spin</h1>
+            <h2 id="numOfSpins"></h2>
+
+        <div class="container">
+            <div class="row">
+                <iframe src="silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+                <audio id="player" autoplay loop>
+                    <source src="spin.mp3" type="audio/mp3">
+                </audio>
+
+                <img id="loading" style="height: 50vh; width: 50vh;"
+                     src="rightRound.gif">
+            </div>
+        </div>
+    </body>
+</html>
